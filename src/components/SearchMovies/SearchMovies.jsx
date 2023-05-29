@@ -9,7 +9,7 @@ const SearchMovies = ({ onSubmit }) => {
     const query = e.target.elements.query.value;
 
     if (!query) {
-      toast.error('Please enter the name of the movie');
+      toast.error('Please enter a keyword');
       return;
     }
 
@@ -19,11 +19,7 @@ const SearchMovies = ({ onSubmit }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Input
-        name="query"
-        type="text"
-        placeholder="Enter the name of the movie"
-      />
+      <Input name="query" type="text" placeholder="Enter a keyword" />
       <Button type="submit">Search</Button>
     </Form>
   );
